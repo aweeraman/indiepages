@@ -20,6 +20,9 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "~3.3.5"
+    "bootstrap": "~3.3.5",
+    "startbootstrap": "*",
+    "fontawesome": "~4.3.0",
+    "jquery-easing": "*"
   }
 }
