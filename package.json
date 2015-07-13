@@ -1,0 +1,11 @@
+{
+  "name": "indiepages",
+  "version": "1.0.0",
+  "description": "indiepages.io",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  },
+  "author": "Anuradha Weeraman",
+  "license": "ISC"
+}

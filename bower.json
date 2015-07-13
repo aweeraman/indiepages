@@ -1,0 +1,25 @@
+{
+  "name": "indiepages",
+  "version": "1.0.0",
+  "authors": [
+    "Anuradha Weeraman <aweeraman@gmail.com>"
+  ],
+  "description": "indiepages.io",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "homepage": "indiepages.io",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "www/lib/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5"
+  }
+}
