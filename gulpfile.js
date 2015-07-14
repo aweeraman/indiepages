@@ -1,10 +1,4 @@
 var gulp = require('gulp');
-var connect = require('gulp-connect');
+var shell = require('gulp-shell');
 
-gulp.task('serve', function () {
-    connect.server({
-        root: 'www',
-        port: 8000,
-        livereload: true
-    });
-});
+gulp.task('serve', shell.task("node app.js"));
