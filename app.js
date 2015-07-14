@@ -10,7 +10,7 @@ app.set('port', process.env.PORT || 8080);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use('/', express.static('www'));
+app.use('/', express.static('public'));
 app.use('/api', ping);
 
 var server = app.listen(app.get('port'), function() {
