@@ -23,6 +23,7 @@
     "bootstrap": "~3.3.5",
     "startbootstrap": "*",
     "fontawesome": "~4.3.0",
-    "jquery-easing": "*"
+    "jquery-easing": "*",
+    "bootstrap-social": "~4.9.1"
   }
 }
