@@ -1,37 +1,16 @@
 var appcfg        = require('./config/appcfg.js');
+var passportcfg   = require('./config/passport');
+
 var express       = require('express');
 var session       = require('express-session');
 var cookieParser  = require('cookie-parser');
 var bodyParser    = require('body-parser');
 var passport      = require('passport');
-var fbStrategy    = require('passport-facebook').Strategy;
 
 var app = express();
 
-passport.serializeUser(function(user, done) {
-  done(null, user);
-});
-
-passport.deserializeUser(function(obj, done) {
-  done(null, obj);
-});
-
-passport.use(new fbStrategy({
-  clientID: appcfg.fb_api_key,
-  clientSecret: appcfg.fb_api_secret,
-  callbackURL: appcfg.callback_url
-},
-function(accessToken, refreshToken, profile, done) {
-  process.nextTick(function() {
-    // Check whether the user exists using the profile.id
-    return done(null, profile);
-  });
-}));
-
-var ping = require('./routes/ping');
-
+// Configuration
 app.set('port', process.env.PORT || 8080);
-
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -45,27 +24,16 @@ app.use(session(
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.get('/auth/facebook', passport.authenticate('facebook'));
+// Load routes
+var ping = require('./routes/ping');
+var auth = require('./routes/auth');
 
-app.get('/auth/facebook/callback',
-  passport.authenticate('facebook', {
-    successRedirect: '/app',
-    failureRedirect: '/auth/error'
-  }), function(req, res) {
-    res.redirect('/');
-  });
-
-app.get('/app', function(req, res) {
-  res.send("Welcome.");
-});
-
-app.get('/auth/error', function(req, res) {
-  res.send("Authentication failed.");
-});
-
+// Mount the routes
 app.use('/', express.static('public'));
 app.use('/api', ping);
+app.use('/auth', auth);
 
+// Start the server
 var server = app.listen(app.get('port'), function() {
   console.log('Server listening on ' + server.address().port);
 });
