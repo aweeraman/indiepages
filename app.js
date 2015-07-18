@@ -7,6 +7,8 @@ var cookieParser  = require('cookie-parser');
 var bodyParser    = require('body-parser');
 var passport      = require('passport');
 
+var mongoosecfg   = require('./config/mongoose')();
+
 var app = express();
 
 // Configuration

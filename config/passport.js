@@ -11,9 +11,9 @@ passport.deserializeUser(function(obj, done) {
 });
 
 passport.use(new fbStrategy({
-  clientID: appcfg.fb_api_key,
-  clientSecret: appcfg.fb_api_secret,
-  callbackURL: appcfg.callback_url
+  clientID: appcfg.facebook.api_key,
+  clientSecret: appcfg.facebook.api_secret,
+  callbackURL: appcfg.facebook.callback_url
 },
 function(accessToken, refreshToken, profile, done) {
   process.nextTick(function() {
