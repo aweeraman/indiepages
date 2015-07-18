@@ -13,6 +13,11 @@ router.get('/facebook/callback',
     res.redirect('/');
   });
 
+router.get('/logout', function(req, res) {
+  req.logout();
+  res.redirect('/');
+});
+
 router.get('/success', function(req, res) {
   res.send("Authentication successful.");
 });
