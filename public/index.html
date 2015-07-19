@@ -34,75 +34,67 @@
 
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" ng-app="indiepages">
+  <!-- Navigation -->
+  <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+      <div class="container">
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                  <i class="fa fa-bars"></i>
+              </button>
+              <a class="navbar-brand page-scroll" href="#page-top">
+                  <i class="fa fa-book"></i>  indiepages
+              </a>
+          </div>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
-                    <i class="fa fa-book"></i>  indiepages
-                </a>
-            </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+              <ul class="nav navbar-nav">
+                  <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                  <li class="hidden">
+                      <a href="#page-top"></a>
+                  </li>
+                  <li>
+                      <a class="page-scroll" href="#about">About</a>
+                  </li>
+                  <li>
+                      <a class="page-scroll" href="#contact">Contact</a>
+                  </li>
+              </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container -->
+  </nav>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#about">About</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+  <div ui-view class="intro"></div>
 
-    <!-- Intro Header -->
-    <header class="intro">
-        <div class="intro-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading">indiepages</h1>
-                        <p class="intro-text">Bibliophiles only.</p>
-                        <a href="/auth/facebook" class="btn btn-social btn-facebook">
-                          <i class="fa fa-facebook"></i> Sign in with Facebook
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+  <!-- Footer -->
+  <footer>
+      <div class="container text-center">
+          <p>Copyright &copy; indiepages.io 2015</p>
+      </div>
+  </footer>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container text-center">
-            <p>Copyright &copy; indiepages.io 2015</p>
-        </div>
-    </footer>
+  <!-- jQuery Version 1.11.0 -->
+  <script src="lib/jquery/dist/jquery.js"></script>
 
-    <!-- jQuery Version 1.11.0 -->
-    <script src="lib/jquery/dist/jquery.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+  <!-- Plugin JavaScript -->
+  <script src="lib/jquery-easing/jquery.easing.js"></script>
 
-    <!-- Plugin JavaScript -->
-    <script src="lib/jquery-easing/jquery.easing.js"></script>
+  <!-- Custom Theme JavaScript -->
+  <script src="js/theme/grayscale.js"></script>
 
-    <!-- Custom Theme JavaScript -->
-    <script src="js/theme/grayscale.js"></script>
+  <!-- Angular -->
+  <script src="lib/angular/angular.js"></script>
+  <script src="lib/angular-resource/angular-resource.js"></script>
+  <script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
+
+  <script src="js/controllers/AuthCtrl.js"></script>
+  <script src="app.js"></script>
 
 </body>
 

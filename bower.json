@@ -24,6 +24,9 @@
     "startbootstrap": "*",
     "fontawesome": "~4.3.0",
     "jquery-easing": "*",
-    "bootstrap-social": "~4.9.1"
+    "bootstrap-social": "~4.9.1",
+    "angular": "~1.4.3",
+    "angular-resource": "~1.4.3",
+    "angular-ui-router": "~0.2.15"
   }
 }
