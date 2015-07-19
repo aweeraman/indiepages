@@ -9,8 +9,8 @@ router.get('/facebook/callback',
   passport.authenticate('facebook',
   {
     scope: [ 'email', 'public_profile' ],
-    successRedirect: '/auth/success',
-    failureRedirect: '/auth/error'
+    successRedirect: '/',
+    failureRedirect: '/error'
   }), function(req, res) {
     res.redirect('/');
   });
@@ -18,14 +18,6 @@ router.get('/facebook/callback',
 router.get('/logout', function(req, res) {
   req.logout();
   res.redirect('/');
-});
-
-router.get('/success', function(req, res) {
-  res.send("Authentication successful.");
-});
-
-router.get('/error', function(req, res) {
-  res.send("Authentication failed.");
 });
 
 module.exports = router;

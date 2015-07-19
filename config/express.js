@@ -3,6 +3,7 @@ var session       = require('express-session');
 var cookieParser  = require('cookie-parser');
 var bodyParser    = require('body-parser');
 var passport      = require('passport');
+var cors          = require('cors');
 
 var appcfg        = require('./appcfg');
 var mongoosecfg   = require('./mongoose')();
@@ -22,6 +23,7 @@ app.use(session(
     saveUninitialized: true
   }
 ));
+app.use(cors());
 app.use(passport.initialize());
 app.use(passport.session());
 
