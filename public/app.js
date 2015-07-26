@@ -21,6 +21,13 @@
       controller: 'AuthCtrl'
     });
 
+    $stateProvider.state('writer', {
+      url: '/writer',
+      cache: true,
+      templateUrl: 'templates/writer.html',
+      controller: 'WriterCtrl'
+    });
+
     $urlRouterProvider.otherwise('/');
   });
 })();

@@ -5,6 +5,7 @@
 
   app.controller('AuthCtrl', ['$scope', '$log', '$resource', '$state', 'AuthService',
                               function ($scope, $log, $resource, $state, AuthService) {
+    $scope.intro = true;
     $scope.authenticated = false;
     $scope.user = {};
 

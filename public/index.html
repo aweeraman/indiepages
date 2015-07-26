@@ -36,7 +36,7 @@
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" ng-app="indiepages">
 
-  <div ui-view class="intro"></div>
+  <div ui-view ng-class="{'intro': intro }"></div>
 
   <!-- Footer -->
   <footer>
@@ -63,6 +63,7 @@
   <script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
 
   <script src="js/controllers/AuthCtrl.js"></script>
+  <script src="js/controllers/WriterCtrl.js"></script>
   <script src="js/services/AuthService.js"></script>
   <script src="app.js"></script>
 
