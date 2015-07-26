@@ -9,23 +9,44 @@
 
     $stateProvider.state('intro', {
       url: '/',
-      cache: false,
-      templateUrl: 'templates/intro.html',
-      controller: 'AuthCtrl'
+      views: {
+        navbar: {
+          templateUrl: 'templates/navbar.html',
+          controller: 'AuthCtrl'
+        },
+        body: {
+          templateUrl: 'templates/intro.html',
+          controller: 'AuthCtrl'
+        },
+        footer: {
+          templateUrl: 'templates/footer.html',
+          controller: 'AuthCtrl'
+        }
+      }
     });
 
     $stateProvider.state('error', {
       url: '/error',
-      cache: false,
       templateUrl: 'templates/error.html',
       controller: 'AuthCtrl'
     });
 
     $stateProvider.state('writer', {
       url: '/writer',
-      cache: true,
-      templateUrl: 'templates/writer.html',
-      controller: 'WriterCtrl'
+      views: {
+        navbar: {
+          templateUrl: 'templates/navbar.html',
+          controller: 'AuthCtrl'
+        },
+        body: {
+          templateUrl: 'templates/writer.html',
+          controller: 'WriterCtrl'
+        },
+        footer: {
+          templateUrl: 'templates/footer.html',
+          controller: 'AuthCtrl'
+        }
+      }
     });
 
     $urlRouterProvider.otherwise('/');

@@ -36,14 +36,9 @@
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" ng-app="indiepages">
 
-  <div ui-view ng-class="{'intro': intro }"></div>
-
-  <!-- Footer -->
-  <footer>
-      <div class="container text-center">
-          <p>Copyright &copy; indiepages.io 2015</p>
-      </div>
-  </footer>
+  <div ui-view="navbar"></div>
+  <div ui-view="body" ng-class="{'intro': intro }"></div>
+  <div ui-view="footer"></div>
 
   <!-- jQuery Version 1.11.0 -->
   <script src="lib/jquery/dist/jquery.js"></script>

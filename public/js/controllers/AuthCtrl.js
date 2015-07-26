@@ -18,7 +18,7 @@
 
     $scope.logout = function() {
       AuthService.logout().get(function() {
-        $state.go($state.current, {}, { reload: true });
+        $state.go('intro', {}, { reload: true });
       });
     };
   }]);
