@@ -11,7 +11,7 @@
       url: '/',
       views: {
         navbar: {
-          templateUrl: 'templates/navbar.html',
+          templateUrl: 'templates/intro-navbar.html',
           controller: 'AuthCtrl'
         },
         body: {
@@ -27,8 +27,20 @@
 
     $stateProvider.state('error', {
       url: '/error',
-      templateUrl: 'templates/error.html',
-      controller: 'AuthCtrl'
+      views: {
+        navbar: {
+          templateUrl: 'templates/intro-navbar.html',
+          controller: 'AuthCtrl'
+        },
+        body: {
+          templateUrl: 'templates/error.html',
+          controller: 'AuthCtrl'
+        },
+        footer: {
+          templateUrl: 'templates/footer.html',
+          controller: 'AuthCtrl'
+        }
+      }
     });
 
     $stateProvider.state('writer', {
@@ -41,6 +53,42 @@
         body: {
           templateUrl: 'templates/writer.html',
           controller: 'WriterCtrl'
+        },
+        footer: {
+          templateUrl: 'templates/footer.html',
+          controller: 'AuthCtrl'
+        }
+      }
+    });
+
+    $stateProvider.state('reader', {
+      url: '/reader',
+      views: {
+        navbar: {
+          templateUrl: 'templates/navbar.html',
+          controller: 'AuthCtrl'
+        },
+        body: {
+          templateUrl: 'templates/reader.html',
+          controller: 'ReaderCtrl'
+        },
+        footer: {
+          templateUrl: 'templates/footer.html',
+          controller: 'AuthCtrl'
+        }
+      }
+    });
+
+    $stateProvider.state('pro', {
+      url: '/pro',
+      views: {
+        navbar: {
+          templateUrl: 'templates/navbar.html',
+          controller: 'AuthCtrl'
+        },
+        body: {
+          templateUrl: 'templates/pro.html',
+          controller: 'ProCtrl'
         },
         footer: {
           templateUrl: 'templates/footer.html',
