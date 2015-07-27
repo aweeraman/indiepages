@@ -1,5 +1,5 @@
 (function() {
-  var app = angular.module('indiepages', ['indiepages.controllers', 'indiepages.services', 'ui.router', 'ngResource']);
+  var app = angular.module('indiepages', ['indiepages.controllers', 'indiepages.services', 'indiepages.directives', 'ui.router', 'ngResource']);
 
   app.run(function() {
 
